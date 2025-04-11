@@ -1,0 +1,580 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-color:#080808;
+    --second-bg-color:#131313;
+    --text-color:white;
+    --main-color:#00ffee;
+    --bg-section-color: #00ffee1f;
+}
+
+html{
+    font-size: 100%;
+    line-height: 1.8;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    background-image: url(/photo/bg.jpg);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+ 
+/* header and navbar */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1em);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+
+.logo span {
+    text-shadow: 0 0 2rem var(--main-color);
+}
+
+.navbar a{
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    font-weight: bolder;
+    transition: 0.3s ease;
+    border-bottom: 0.2rem solid transparent;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: var(--main-color);
+    border-bottom: 0.2rem solid var(--main-color);
+}
+#menu-icon {
+    display: inline-block !important;
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: auto; }
+
+    /* section 1 home */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8rem 5% 5rem;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.noura-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section1{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.color_h{
+    color: var(--main-color);
+}
+
+.noura{
+    width: 18rem;
+    height: 18rem;
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem var(--main-color);
+    margin: 0 auto;
+}
+
+.i {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.i a{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding: 0.2em;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 1rem;
+} 
+     
+.i a i {
+    color: var(--main-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+ .i a:hover i {
+    color: rgb(241, 242, 249);
+    transform: scale(1.1);
+} 
+
+/* section 2 skills */
+#skills{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-section-color);
+    box-shadow: 0 0 2rem var(--main-color);
+    margin: 4rem auto;
+    padding: 3rem 5%;
+    max-width: 100%;
+}
+
+.skill2 {
+    width: 100%;
+    max-width: 800px;
+}
+
+.skill2 h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skill2 ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill2 li {
+    margin-bottom: 1rem;
+}
+
+/* section 3 services */
+
+#services1 > h2, #contact > h2, #projects > h2 {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 5%;
+    max-width: 100%;
+}
+
+#services > div {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 250px;
+    padding: 2rem;
+    background: var(--bg-section-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services > div:hover, input:hover, textarea:hover, .btn:hover ,.logo:hover , #btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem wheat;
+}
+
+#services i {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* section 4 projects */
+#projects {
+    padding: 3rem 5%;
+    margin: 4rem auto;
+    background-color: var(--bg-section-color);
+    max-width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 60vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item > a > img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid;
+    box-shadow: var(--box-shadow);
+    border-radius: 1%;
+    display: block;
+    object-fit: contain;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.left {
+    left: 10px;
+}
+
+.carousel-control.right {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: var(--main-color);
+}
+
+/* section 5 contacts */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem auto;
+    padding: 3rem 5%;
+    border-radius: 3rem;
+    background-color: var(--bg-section-color);
+    max-width: 1200px;
+    width: 90%;
+}
+
+#contact form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input, textarea {
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input {
+    width: 100%;
+}
+
+
+
+input[type="email"], textarea {
+    width: 100%;
+}
+
+textarea {
+    height: 8rem;
+    resize: none;
+}
+
+.btn{
+    width: auto;
+    min-width: 10rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: bolder;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    margin: 1rem auto;
+    cursor: pointer;
+    display: block;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: #052437;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.popup-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+/* media */
+
+@media screen and (min-width: 768px) {
+    .section1 {
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    input {
+        width: calc(50% - 0.5rem);
+    }
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 90%;
+    }
+    
+    #home {
+        padding-top: 7rem;
+    }
+    
+    .noura {
+        width: 16rem;
+        height: 16rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+   
+    #menu-icon {
+        display: block !important;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(1em);
+        border-top: 0.1rem solid rgba(0, 255, 238, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    #home {
+        padding-top: 6rem;
+    }
+    
+    .noura-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section1 {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+   
+    .noura {
+        width: 15rem;
+        height: 15rem;
+    }
+    
+    .i {
+        justify-content: center;
+    }
+    
+    .carousel-control {
+        font-size: 24px;
+        padding: 8px;
+    }
+    
+   
+    #services > div {
+        min-width: 200px;
+        flex: 1 1 100%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 80%;
+    }
+    
+    .header {
+        padding: 1rem 3%;
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    #skills, #contact, #projects {
+        padding: 2rem 1rem;
+        margin: 3rem auto;
+    }
+    
+    #services {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    #services > div {
+        min-width: 100%;
+    }
+    
+    .noura {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .carousel-container {
+        width: 95%;
+    }
+    
+    .carousel-control {
+        font-size: 20px;
+        padding: 6px;
+    }
+    
+    .popup-content {
+        padding: 15px;
+    }}
+
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 75%;
+    }
+    
+    .noura {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    #services > div {
+        padding: 1.5rem;
+    } 
+    
+    .btn {
+        min-width: 8rem;
+        padding: 0.7rem 1.2rem;}}
+
+        #btn{
+            color: var(--text-color);
+            font-size: larger;
+            width: 33px;
+            height: 33px;
+            border: none;
+            background: var(--main-color);
+            cursor: pointer;
+            position: fixed;
+            bottom:40px ;
+            right: 40px;
+            display: none;
+            border-radius: 80px ;;
+            box-shadow: 0 0 2rem wheat;}
+             #btn:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 2rem var(--main-color);
+             }
+        
